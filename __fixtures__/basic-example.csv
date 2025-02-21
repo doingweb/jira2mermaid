@@ -1,0 +1,6 @@
+Issue key,Issue id,Issue Type,Summary,Status,Parent,Inward issue link (Blocks),Inward issue link (Blocks)
+PROJ-100,10000,Story,Story 1,In Progress,,,
+PROJ-101,10001,Task,Task 1,Done,10000,PROJ-102
+PROJ-102,10002,Task,Task 2,Done,10000,PROJ-103,PROJ-104
+PROJ-103,10003,Sub-task,Sub-task 1,PR,10000,,
+PROJ-104,10004,Sub-task,Sub-task 2,To Do,10000,,

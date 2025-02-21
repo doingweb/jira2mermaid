@@ -1,0 +1,14 @@
+{
+  "tasks": {
+    "dev": "deno run --watch --allow-read main.ts __fixtures__/basic-example.csv",
+    "deploy": "deno compile --allow-read --output $HOME/bin/ main.ts",
+    "test": "deno test --allow-read",
+    "test:watch": "deno task test --watch",
+    "test:update": "deno test --allow-all -- --update"
+  },
+  "imports": {
+    "@std/csv": "jsr:@std/csv@^1.0.5",
+    "@std/expect": "jsr:@std/expect@^1.0.13",
+    "@std/testing": "jsr:@std/testing@^1.0.9"
+  }
+}

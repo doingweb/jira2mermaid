@@ -1,0 +1,5 @@
+Issue key,Issue id,Issue Type,Summary,Status,Parent,Inward issue link (Blocks),Inward issue link (Blocks)
+PROJ-100,10000,Story,"This ""summary"" has quotes",Done,,,
+PROJ-101,10001,Story,This summary is super long and will get truncated to 50 characters,Done,,,
+PROJ-102,10002,Story,"This summary has a comma, which is fine",Done,,,
+PROJ-103,10003,Story,"  This one has extra spaces around it ",Done,,,

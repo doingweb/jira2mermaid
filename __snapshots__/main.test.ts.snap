@@ -1,0 +1,47 @@
+export const snapshot = {};
+
+snapshot[`renders Mermaid for the basic example CSV file (basic-example.csv) 1`] = `
+'%%{init: {"flowchart": {"defaultRenderer": "elk"}} }%%
+graph LR
+  classDef toDo fill:#f5f0e3,color:#5c544b,stroke:#5c544b;
+  classDef inProgress fill:#e8f0fe,color:#3b5ba3,stroke:#3b5ba3;
+  classDef pr fill:#f8e7ff,color:#5a3b80,stroke:#5a3b80;
+  classDef done fill:#e6f4ea,color:#344a42,stroke:#344a42;
+  PROJ-100[["PROJ-100<br>Story 1"]]
+  PROJ-101("PROJ-101<br>Task 1")
+  PROJ-102("PROJ-102<br>Task 2")
+  PROJ-103(["PROJ-103<br>Sub-task 1"])
+  PROJ-104(["PROJ-104<br>Sub-task 2"])
+  PROJ-102 --> PROJ-101
+  PROJ-103 --> PROJ-102
+  PROJ-104 --> PROJ-102
+  PROJ-103 -.-> PROJ-100
+  PROJ-104 -.-> PROJ-100
+  class PROJ-100 inProgress
+  class PROJ-101,PROJ-102 done
+  class PROJ-103 pr
+  class PROJ-104 toDo'
+`;
+
+snapshot[`sanitizes the "Summary" field (weird-summaries.csv) 1`] = `
+'%%{init: {"flowchart": {"defaultRenderer": "elk"}} }%%
+graph LR
+  classDef toDo fill:#f5f0e3,color:#5c544b,stroke:#5c544b;
+  classDef inProgress fill:#e8f0fe,color:#3b5ba3,stroke:#3b5ba3;
+  classDef pr fill:#f8e7ff,color:#5a3b80,stroke:#5a3b80;
+  classDef done fill:#e6f4ea,color:#344a42,stroke:#344a42;
+  PROJ-100[["PROJ-100<br>This #quot;summary#quot; has quotes"]]
+  PROJ-101[["PROJ-101<br>This summary is super long and will get truncated ..."]]
+  PROJ-102[["PROJ-102<br>This summary has a comma, which is fine"]]
+  PROJ-103[["PROJ-103<br>This one has extra spaces around it"]]
+  class PROJ-100,PROJ-101,PROJ-102,PROJ-103 done'
+`;
+
+snapshot[`just renders the boilerplate if there are no tickets (no-tickets.csv) 1`] = `
+'%%{init: {"flowchart": {"defaultRenderer": "elk"}} }%%
+graph LR
+  classDef toDo fill:#f5f0e3,color:#5c544b,stroke:#5c544b;
+  classDef inProgress fill:#e8f0fe,color:#3b5ba3,stroke:#3b5ba3;
+  classDef pr fill:#f8e7ff,color:#5a3b80,stroke:#5a3b80;
+  classDef done fill:#e6f4ea,color:#344a42,stroke:#344a42;'
+`;
